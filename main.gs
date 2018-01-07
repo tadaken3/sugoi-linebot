@@ -6,10 +6,11 @@ function doPost(e) {
   if (typeof reply_token === 'undefined') {
     return;
   }
-  var user_message = JSON.parse(e.postData.contents).events[0].message.text;
-  var reply_messages = ['ごめん。わからなかった…'];
   
-  if (user_message　　=== "ジム") {
+  var user_message = JSON.parse(e.postData.contents).events[0].message.text;
+  var reply_messages = ['ごめん。わからなかった。。。ところでジムに行ったのかい？'];
+  
+  if (user_message.match(/ジム/)) {
     reply_messages = ['すごい'];
   }
   
