@@ -16,6 +16,9 @@ function doPost(e) {
   } else if (user_message.match(/走った/)) {
     reply_messages = ['すごい'];
   }
+  else if (user_message.match(/寂しい/)) {
+    reply_messages = ['君はひとりじゃない'];
+  }
   
   var messages = reply_messages.map(function (v) {
     return {'type': 'text', 'text': v};
