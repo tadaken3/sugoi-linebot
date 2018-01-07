@@ -12,6 +12,9 @@ function doPost(e) {
   
   if (user_message.match(/ジム/)) {
     reply_messages = ['すごい'];
+    
+  } else if (user_message.match(/走った/)) {
+    reply_messages = ['すごい'];
   }
   
   var messages = reply_messages.map(function (v) {
